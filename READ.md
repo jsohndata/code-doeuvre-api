@@ -8,6 +8,7 @@ Feel free to change this to index.js. If you do so, make sure to update package.
 I choose server.js as it makes sense to me. 
 
 ***nodemon***
+
 If using server.js you might have to launch nodemon by the following
 ```
 nodemon server.js
