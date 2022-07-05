@@ -7,13 +7,13 @@ const renderHtml = (paramWhere, paramWhat) =>  document.querySelector(paramWhere
 let dataContainer
 const processDataEach = paramProcessEach => dataContainer += dataContainerEach(paramProcessEach)
 
-const dataContainerEach = paramDataEach => 
+const dataContainerEach = paramContainerEach => 
 `<div class="menu-items__item">
-    <img src="${paramDataEach.image}">
+    <img src="${paramContainerEach.image}">
     <div>
-        <h3>${paramDataEach.id} ${paramDataEach.title}</h3>
-        <p>${paramDataEach.description}</p>
-        <p>${paramDataEach.ingredients}</p>
+        <h3>${paramContainerEach.id} ${paramContainerEach.title}</h3>
+        <p>${paramContainerEach.description}</p>
+        <p>${paramContainerEach.ingredients}</p>
     </div>
 </div>`
 
@@ -22,9 +22,9 @@ const dataContainerEach = paramDataEach =>
 // ***************************************
 fetch(APIURL)
 .then(response => response.json())
-.then(dataContainer => {
+.then(dataCore => {
     
-    dataContainer.forEach(dataEach => { processDataEach(dataEach) })
+    dataCore.forEach(dataEach => { processDataEach(dataEach) })
 
     renderHtml('.htmlDisplay',dataContainer)    
 })
