@@ -4,7 +4,7 @@ API code example for Boca Code's API course.
 ## Demo
 [Demo link](https://jsohn-plantapi.web.app/)
 
-![Demo screen shot]()
+![Demo screen shot](https://github.com/jsohndata/app-plantapi/blob/main/images/--demo-sample.png)
 
 ## Note
 ***api > server.js***
