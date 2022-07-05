@@ -1,5 +1,10 @@
-# Code D'oeuvre: API
-Sample of the coding excersie done for Boca Code API course.
+# App Plantapi
+API code example for Boca Code's API course.
+
+## Demo
+[Demo link](https://jsohn-plantapi.web.app/)
+
+![Demo screen shot]()
 
 ## Note
 ***api > server.js***
