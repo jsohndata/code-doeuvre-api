@@ -1,0 +1,21 @@
+body {
+    background: #f4f5f6;
+}
+
+main.htmlDisplay {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-items__item {
+    width: 25rem;
+    padding: 1.0rem;
+    margin: 0.5rem;
+    background: #ffffff;
+    border: 3px solid #777777;
+}
+
+.menu-items__item img {
+    width: 100%;
+    max-width: 25.0rem;
+}
