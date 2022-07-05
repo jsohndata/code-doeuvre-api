@@ -21,4 +21,4 @@ main.htmlDisplay {
     max-width: 25.0rem;
 }
 
-header { text-align: center;}
+header, footer { text-align: center;}
