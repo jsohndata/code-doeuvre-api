@@ -24,7 +24,7 @@ fetch(APIURL)
 .then(response => response.json())
 .then(dataCore => {
     
-    dataCore.forEach(dataEach => { processDataEach(dataEach) })
+    dataCore.forEach(dataCoreEach => { processDataEach(dataCoreEach) })
 
     renderHtml('.htmlDisplay',dataContainer)    
 })
