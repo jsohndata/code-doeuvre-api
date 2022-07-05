@@ -1,21 +1,19 @@
-// Setup and Functions
+// Variables and Functions
 // ***************************************
 const APIURL = 'http://localhost:4000/json'
 
-const htmlDisplayElement = paramWhere => document.querySelector(paramWhere)
+const renderHtml = (paramWhere, paramWhat) =>  document.querySelector(paramWhere).innerHTML = paramWhat
 
-const renderHtml = (paramWhere, paramWhat) =>  paramWhere.innerHTML = paramWhat
+let dataContainer
+const processDataEach = paramProcessEach => dataContainer += dataContainerEach(paramProcessEach)
 
-let htmlContainer
-const processHtmlEach = paramProcessEach => htmlContainer += htmlContainerEach(paramProcessEach)
-
-const htmlContainerEach = paramContainerEach => 
+const dataContainerEach = paramDataEach => 
 `<div class="menu-items__item">
-    <img src="${paramContainerEach.image}">
+    <img src="${paramDataEach.image}">
     <div>
-        <h3>${paramContainerEach.id} ${paramContainerEach.title}</h3>
-        <p>${paramContainerEach.description}</p>
-        <p>${paramContainerEach.ingredients}</p>
+        <h3>${paramDataEach.id} ${paramDataEach.title}</h3>
+        <p>${paramDataEach.description}</p>
+        <p>${paramDataEach.ingredients}</p>
     </div>
 </div>`
 
@@ -26,7 +24,7 @@ fetch(APIURL)
 .then(response => response.json())
 .then(dataContainer => {
     
-    dataContainer.forEach(dataEach => { processHtmlEach(dataEach) })
-    
-    renderHtml(htmlDisplayElement('.htmlDisplay'),htmlContainer)    
+    dataContainer.forEach(dataEach => { processDataEach(dataEach) })
+
+    renderHtml('.htmlDisplay',dataContainer)    
 })
