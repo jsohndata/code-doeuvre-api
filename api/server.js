@@ -10,7 +10,8 @@ npm install cors express
 
 // Setup and Functions
 // ***************************************
-const databaseJson = require('./database.json')
+const databaseJsonFile = './database.json'
+const databaseJson     = require(databaseJsonFile)
 
 const express = require('express')
 const cors    = require('cors')
@@ -22,7 +23,13 @@ const app     = express()
 app.use(cors())
 app.use(express.json())
 
-// Routing
+const jsonWrite = () => fs.writeFile(
+    databaseJsonFile, 
+    JSON.stringify(databaseJson), 
+    (err) => console.log(err))
+  
+
+// Action
 // ***************************************
 app.listen(PORT, () => {
     console.log(`API listning to port ${PORT}`)
@@ -34,4 +41,33 @@ app.get("/", (request, response) => {
 
 app.get("/json", (request, response) => {
     response.send(databaseJson)
+})
+
+app.post('/', (request, response) => {
+    if(request.body) {
+        databaseJson.push(request.body)    
+        jsonWrite()
+        response.send('updated.')
+    } else { response.send(`no body loves me--jk!`) }
+})
+
+app.put('/', (request, response) => {
+    const requestTitle = request.query.title
+    const queryFind    = databaseJson.find(databaseQuery => databaseQuery.title ? databaseQuery.title === requestTitle : console.log('no title found'))
+    const queryIndex   = databaseJson.indexOf(queryFind)
+
+    /* splice() to add */
+    databaseJson[queryIndex] = request.body
+    jsonWrite()
+    response.send('found and updated')
+})
+
+app.delete('/', (request,response ) => {
+    const requestTitle = request.query.title
+    const queryFind    = databaseJson.find(databaseQuery => databaseQuery.title ? databaseQuery.title === requestTitle : console.log('no title found'))
+    const queryIndex   = databaseJson.indexOf(queryFind)
+
+    databaseJson.splice(queryIndex,1)
+    jsonWrite()
+    response.send('deleted')
 })
