@@ -27,6 +27,12 @@ const jsonWrite = () => fs.writeFile(
     databaseJsonFile, 
     JSON.stringify(databaseJson), 
     (err) => console.log(err))
+
+const queryLookUp = () => {
+    const queryFind   = databaseJson.find(databaseQuery => databaseQuery.title ? databaseQuery.title === request.query.title : console.log('no title found'))
+    const queryIndex  = databaseJson.indexOf(queryFind)
+    return queryIndex;
+}
   
 
 // Action
