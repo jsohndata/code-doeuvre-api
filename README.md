@@ -2,7 +2,7 @@
 API code example for Boca Code's API course.
 
 ## Demo
-See the [demo link] on Firebase. (https://jsohn-plantapi.web.app/)
+See the [demo link](https://jsohn-plantapi.web.app/) on Firebase. 
 
 ![Demo screen shot](https://github.com/jsohndata/app-plantapi/blob/main/images/--demo-sample.png)
 
