@@ -8,7 +8,7 @@ npm -y init
 npm install cors express
 */
 
-// Setup and Functions
+// Variables and Functions
 // ***************************************
 const databaseJsonFile = './database.json'
 const databaseJson     = require(databaseJsonFile)
@@ -38,7 +38,7 @@ const queryLookUp = () => {
 // Action
 // ***************************************
 app.listen(PORT, () => {
-    console.log(`API listning to port ${PORT}`)
+    console.log(`API listening to port ${PORT}`)
 })
 
 app.get("/", (request, response) => {
