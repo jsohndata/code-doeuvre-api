@@ -1,6 +1,2 @@
-api/node_modules
-api/package.json
-api/package-lock.json
-.firebase
-.firebaserc
-firebase.json
+.DS_STORE
+node_modules

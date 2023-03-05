@@ -1,21 +1,7 @@
-# App Plantapi
-API code example for Boca Code's API course.
+# Plant Express API / Front-End
+[![Demo screen shot](./images/screen-shot.png)](https://jsohndata.github.io/plant-express-api-front-end/)
 
-## Demo
-See the [demo link](https://jsohn-plantapi.web.app/) on Firebase. 
+Create a straight-foward API using Express and front-end using vanilla JavaScript.
 
-![Demo screen shot](https://github.com/jsohndata/app-plantapi/blob/main/images/--demo-sample.png)
+[jsohndata.github.io/plant-express-api-front-end/](https://jsohndata.github.io/plant-express-api-front-end/)
 
-## Note
-***api > server.js***
-
-Feel free to change this to index.js. If you do so, make sure to update package.json > main > index.js.
-I choose server.js as it makes sense to me. 
-
-***nodemon***
-
-If using server.js you might have to launch nodemon by the following
-```
-nodemon server.js
-```
-That being said, updating package.json to server.js, I've been able to simply launch it by typing `nodemon`

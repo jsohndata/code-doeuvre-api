@@ -1,0 +1,17 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#3d4802",
+    "titleBar.activeBackground": "#334821",
+    "titleBar.activeForeground": "#f7f4f7",
+    
+    "foreground": "#00ff00",
+    "sideBar.background": "#022b47",
+    "sideBar.foreground": "#8aeb22",
+    "sideBarTitle.foreground": "#00ff3c",
+    "editor.background": "#272c2c",
+    
+    "panel.background": "#241f1f",
+    "panel.border": "#104022",
+    "terminal.background": "#181a1b"
+  }
+}
