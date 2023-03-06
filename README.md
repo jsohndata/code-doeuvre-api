@@ -3,5 +3,5 @@
 
 Collection of my plants. Class exercise going over Express, Node.js, DOM, and json.
 
-## Links
+## Link(s)
 * [👉 jsohndata.github.io/plant-express-api-front-end](https://jsohndata.github.io/plant-express-api-front-end/)
